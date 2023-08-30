@@ -1,0 +1,7 @@
+.orderbox{
+    width: 18rem;
+    max-height: 360px;
+    border: 0.1px solid white;
+    border-radius: 3px;
+    padding: 1rem;
+}

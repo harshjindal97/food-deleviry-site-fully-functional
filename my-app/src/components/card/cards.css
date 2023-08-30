@@ -1,0 +1,25 @@
+/* .orderbox_body h5{
+    color: white;
+} */
+.orderbox{
+
+    width: 18rem;
+    max-height: 360px;
+    border: 0.1px solid white;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+}
+.select{
+    margin: 0.5rem;
+    min-width: 3rem;
+    background-color: seagreen;
+    border: none;
+    border-radius: 3px;
+}
+.orderbox_body_select{
+    display: flex;
+}
+.orderbox_body_select-price{
+    margin: 0.5rem;
+}

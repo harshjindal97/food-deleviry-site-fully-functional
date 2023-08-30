@@ -1,0 +1,29 @@
+.Navbar{
+    display: flex;
+    background-color: seagreen;
+    align-items: center;
+    /* justify-content: center; */
+    height: 5rem;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+}
+.Navbar a{
+    text-decoration: none;
+    color: white;
+}
+.Navbar_heading{
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-family: fantasy;
+}
+.Navbar_elements{
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 650;
+}
+.Navbar_elements a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
