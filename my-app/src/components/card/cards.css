@@ -23,3 +23,7 @@
 .orderbox_body_select-price{
     margin: 0.5rem;
 }
+.orderbox_image img{
+    height: 100%;
+    width: 100%;
+}

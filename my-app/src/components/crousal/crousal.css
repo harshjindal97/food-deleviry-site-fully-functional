@@ -1,0 +1,13 @@
+.display{
+    display: flex;
+}
+
+.carousel_image img{
+    max-height: 500px;
+    min-width: 100%;
+
+}
+.carousel_image img{
+    /* object-fit: contain !important; */
+    min-width: 100% !important;
+}

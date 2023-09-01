@@ -6,7 +6,7 @@ export default function Card() {
     <div>
       <div>
         <div className='orderbox'>
-          <div><img src="" alt="img" /></div>
+          <div className='orderbox_image'><img src="https://media.istockphoto.com/id/840599504/photo/spring-rolls.jpg?s=612x612&w=0&k=20&c=wByMigy56ioHSR7QzXFNNAbgiso8xlAqPfAD35A6YGA=" alt="img" /></div>
           <div className='orderbox_body'>
             <h5>Card Title</h5>
             <p>This is a card pattern.</p>
