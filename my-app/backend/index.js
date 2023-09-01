@@ -9,6 +9,11 @@ app.get('/', (req, res) => {
     res.send('Hello, world')
 });
 
+app.use('/api/' , require('./routers/CreateUser'));
+
+app.use(express.json());
+
+
 app.listen(port , ()=>{
     console.log(`listening on port ${port}`);
 });
