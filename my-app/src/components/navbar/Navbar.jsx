@@ -10,6 +10,7 @@ export default function Navbar() {
         <div className='Navbar_elements'>
           <Link to="/">Home</Link>
           <Link to="/Login">Login</Link>
+          <Link to="/Signup">Signup</Link>
           
         </div>
         {/* <div className='Navbar_searctbox'>
