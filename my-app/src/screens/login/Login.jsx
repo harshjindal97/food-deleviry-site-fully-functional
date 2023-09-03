@@ -1,23 +1,25 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
-import './signup.css';
+import React, { useState } from 'react'
+import {Link , useNavigate} from 'react-router-dom';
 
-export default function Signup() {
+export default function Login() {
 
-    const [credentials , setCredentials] = useState({name:'' , password:'' , email:'' , location:''})
-
+  const [credentials , setCredentials] = useState({password:'' , email:''});
+  let navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:8000/api/createUser",{
+        const response = await fetch("http://localhost:8000/api/loginUser",{
         method: 'POST',
         headers:{'Content-Type': 'application/json'},
-        body: JSON.stringify({name: credentials.name, password: credentials.password, email: credentials.email , location: credentials.location})
+        body: JSON.stringify({password: credentials.password, email: credentials.email})
     })
         const json = await response.json();
         console.log(json);
 
         if(!json.success) {
             alert('Enter Valid credentials');
+        }
+        if(json.success) {
+          navigate("/");
         }
     };
 
@@ -26,7 +28,8 @@ export default function Signup() {
     }
 
   return (
-    <div className='signup'>
+    <div>
+      <div className='signup'>
       <section className="h-100 h-custom" style={{backgroundColor: "#FAEBD7"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -35,14 +38,11 @@ export default function Signup() {
           <img src="https://media-cdn.tripadvisor.com/media/photo-s/1d/34/8e/ce/landscape-restaurant.jpg"
             className="w-100" alt=''/>
           <div className="card-body p-4 p-md-5">
-            <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+            <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login Info</h3>
 
             <form className="px-md-2" onSubmit={handleSubmit}>
 
-              <div className="form-outline mb-4">
-                <input type="text" id="form3Example1q" className="form-control" name='name' value={credentials.name} onChange={onChange} />
-                <label className="form-label" htmlFor="form3Example1q">Name</label>
-              </div>
+              
               <div className="form-outline mb-4">
                 <input type="text" id="form3Example" className="form-control" name='email' value={credentials.email} onChange={onChange}/>
                 <label className="form-label" htmlFor="form3Example1q">Email Address</label>
@@ -52,10 +52,7 @@ export default function Signup() {
               <div className="row">
                 <div className="col-md-6 mb-4">
 
-                  <div className="form-outline datepicker">
-                    <input type="text" className="form-control" id="exampleDatepicker1" name='location' value={credentials.location} onChange={onChange}/>
-                    <label htmlFor="exampleDatepicker1" className="form-label">Location</label>
-                  </div>
+                  
 
                 </div>
                 
@@ -72,8 +69,8 @@ export default function Signup() {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-success btn-lg mb-1">Submit</button>
-              <Link to="/login" className="btn btn-danger btn-lg mb-1 ms-2" >Already a costumer</Link>
+              <button type="submit" className="btn btn-success btn-lg mb-1">Sign in</button>
+              <Link to="/signup" className="btn mb-1 ms-2" >Signup</Link>
 
             </form>
 
@@ -83,6 +80,7 @@ export default function Signup() {
     </div>
   </div>
 </section>
+    </div>
     </div>
   )
 }

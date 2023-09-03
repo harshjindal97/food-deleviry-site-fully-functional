@@ -32,4 +32,40 @@ router.post('/createUser',
     }
 });
 
+router.post('/loginUser',[
+    check('email', 'not a valid email').isEmail()
+] ,
+ async (req, res)=> {
+    // console.log(req.body);
+    // res.send({success: true});
+    let email = req.body.email;
+    const error = validationResult(req);
+        console.log(error , "error");
+        if (!error.isEmpty()) {
+            return res.status(400).json(error)
+        }
+    try {
+        
+        let user = await User.findOne({email});
+        if (!user) {
+            console.log("user not found");
+            res.send("")
+        } else {
+            // console.log(user);
+            // res.json({success:true});
+            if (user.password === req.body.password) {
+                console.log(user);
+                res.json({success:true});
+                
+            } else {
+                res.json({password:"wrong password"});
+            }
+        }
+    } catch (error) {
+        console.log(error);
+    }
+});    
+
+
+
 module.exports = router;
