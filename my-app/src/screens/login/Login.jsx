@@ -16,9 +16,12 @@ export default function Login() {
         console.log(json);
 
         if(!json.success) {
-            // alert('Enter Valid credentials');
+            alert('Enter Valid credentials');
         }
         if(json.success) {
+          console.log(localStorage);
+          localStorage.setItem("authToken" , json.auth);
+          console.log(localStorage.getItem("authToken"));
           navigate("/");
         }
     };
