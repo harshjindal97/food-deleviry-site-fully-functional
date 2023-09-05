@@ -5,3 +5,13 @@
     border-radius: 3px;
     padding: 1rem;
 }
+
+.design{
+    margin: 1rem;
+    margin-left: 2rem;
+    color: whitesmoke;
+}
+
+.design_card{
+    display: flex;
+}

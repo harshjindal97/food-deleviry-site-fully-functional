@@ -40,8 +40,20 @@ export default function Home() {
         foodcategory!==[]
         ?foodcategory.map((data)=>{
           return(
-          <div>
-            {data.CategoryName}
+          <div className='m-3 row'>
+            <div className='design row' key={data._id}><h3>{data.CategoryName}</h3></div>
+            <hr />
+            {foodItem!==[]
+            ?foodItem.filter(items=>items.CategoryName === data.CategoryName).map((filterItem)=>{
+              return(
+                <div className='design_card  col-sm-6 col-12 col-md-4 col-lg-3 '>
+                <div className='col-12 col-sm-6 col-md-6 col-lg-3' key={filterItem._id}><Card foodName={filterItem.name}
+                imgsrc={filterItem.img}
+                options={filterItem.options}></Card></div>
+                </div>
+              )
+            }):<div>not able to show data</div>
+          }
             
           </div>
           )
@@ -53,7 +65,7 @@ export default function Home() {
 
       }
 
-        <Card/>
+        
       </div>
 
       <div><Footer/></div>

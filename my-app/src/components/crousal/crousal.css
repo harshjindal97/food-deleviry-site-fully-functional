@@ -12,3 +12,15 @@
     /* object-fit: contain !important; */
     min-width: 100% !important;
 }
+
+.buttonName{
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.search_button{
+    height: 40px;
+    color: white;
+    background-color: seagreen;
+    margin-left: 0.3rem;
+}

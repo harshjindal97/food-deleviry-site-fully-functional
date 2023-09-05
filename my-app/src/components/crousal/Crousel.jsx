@@ -9,9 +9,9 @@ export default function Crousel() {
       <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className='carousel-caption' style={{zIndex:"3"}}>
-    <form className="form-inline display">
+    <form className="form-inline display  buttonName">
     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button className="btn btn-outline-success my-2 my-sm-0 search_button" type="submit">Search</button>
   </form>
     </div>
     <div className="carousel-item active carousel_image">
