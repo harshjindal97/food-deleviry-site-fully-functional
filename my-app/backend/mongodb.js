@@ -15,9 +15,18 @@ const mongodb = async () => {
     await mongoose.connect(url ,async ()=>{
         console.log("connect succesfully");
         const fetch_data = await mongoose.connection.db.collection("sampledb");
-        fetch_data.find({}).toArray(function(err, data){
-            if(err){console.log("error---" ,err)}
-            // else{console.log(data)}
+        fetch_data.find({}).toArray(async function(err, data){
+            const catogeries = await mongoose.connection.db.collection("categories");
+            catogeries.find({}).toArray(async function(err,data2){
+                if(err){console.log("error---" ,err)}
+                else{
+                    global.sampledb = data;
+                    global.categories = data2;
+                    // console.log(global.sampledb , global.categories);
+                }
+            });
+
+              
         })
     });
 }

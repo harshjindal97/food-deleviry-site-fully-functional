@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/' , require('./routers/CreateUser'));
+app.use('/api/' , require('./routers/DisplayData'));
 
 app.listen(port , ()=>{
     console.log(`listening on port ${port}`);

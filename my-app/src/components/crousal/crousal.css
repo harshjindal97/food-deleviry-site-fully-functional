@@ -3,8 +3,9 @@
 }
 
 .carousel_image img{
-    max-height: 500px;
+    max-height: 350px;
     min-width: 100%;
+    filter: brightness(40%);
 
 }
 .carousel_image img{
