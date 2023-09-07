@@ -15,3 +15,30 @@
 .design_card{
     display: flex;
 }
+
+.display{
+    display: flex;
+}
+
+.carousel_image img{
+    max-height: 350px;
+    min-width: 100%;
+    filter: brightness(40%);
+
+}
+.carousel_image img{
+    /* object-fit: contain !important; */
+    min-width: 100% !important;
+}
+
+.buttonName{
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.search_button{
+    height: 40px;
+    color: white;
+    background-color: seagreen;
+    margin-left: 0.3rem;
+}

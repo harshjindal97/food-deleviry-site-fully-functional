@@ -2,6 +2,10 @@ import React from 'react'
 import './cards.css'
 // import {cheeserolls} from '.../src/cheeserolls.png';
 export default function Card(props) {
+
+  let options = props.options;
+  let priceOptions = Object.keys(options);
+
   return (
     <div>
       <div>
@@ -19,8 +23,13 @@ export default function Card(props) {
                     <option value="">5</option>
                 </select>
                 <select className='select'>
-                    <option value="">half</option>
-                    <option value="">full</option>
+                  {priceOptions.map((data)=>{
+                    return(
+                      <option value={data} key={data}>{data}</option>
+                    )
+                  })}
+                    {/* <option value="">half</option>
+                    <option value="">full</option> */}
                 </select>
                 <div className='orderbox_body_select-price'>Total price</div>
             </div>

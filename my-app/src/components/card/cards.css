@@ -12,6 +12,7 @@
 }
 .select{
     margin: 0.5rem;
+    margin-left: 0rem;
     min-width: 3rem;
     background-color: seagreen;
     border: none;
