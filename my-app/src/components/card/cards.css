@@ -3,12 +3,15 @@
 } */
 .orderbox{
 
-    width: 18rem;
-    max-height: 360px;
+    width: 15rem;
+    max-height: 350px;
     border: 0.1px solid white;
     border-radius: 3px;
     padding: 1rem;
     margin: 1rem;
+}
+.orderbox_body h5{
+    margin-top: 1rem;
 }
 .select{
     margin: 0.5rem;

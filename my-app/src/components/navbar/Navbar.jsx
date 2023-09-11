@@ -7,12 +7,12 @@ export default function Navbar() {
     <div>
       <div className='Navbar'>
         <div className='Navbar_heading'><h1>Night Food</h1></div>
-        <div className='Navbar_elements'>
-          <Link to="/">Home</Link>
-          <Link to="/Login">Login</Link>
-          <Link to="/Signup">Signup</Link>
+        
+          <div><Link to="/">Home</Link></div>
+          <div className='navbar_login'><Link className='btn bg-white mx-1 text-success' to="/Login">Login</Link>
+          <Link className='btn bg-white mx-1 text-success' to="/Signup">Signup</Link></div>
           
-        </div>
+        
         {/* <div className='Navbar_searctbox'>
           <div>search</div>
           <div><button>search</button></div>
