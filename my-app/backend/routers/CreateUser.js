@@ -72,10 +72,10 @@ router.post('/loginUser',[
             }
             const token = await jwt.sign(data , jwtkey)
         const isMatch = await bcrypt.compare(req.body.password , user.password);
-            // console.log(isMatch);
+            console.log(isMatch);
             // console.log(user.password);
             if (isMatch) {
-                
+                console.log(token);
                 res.json({success:true , auth:token});
                 
             } else {
